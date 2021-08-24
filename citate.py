@@ -1,3 +1,4 @@
+# 24.08.2021 Упражнение по фоматированию стоки 
 first_name = " albert  "
 last_name = " einstein  "
 first_name = first_name.strip()
