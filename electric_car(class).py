@@ -27,9 +27,9 @@ class Car():
 
 class Battery():
     """Простая модель АКБ электромобиля""" 
-    def __init__(self, battery_size=75, upgrade_battery=100):
+    def __init__(self, battery_size=75):
         self.battery_size = battery_size
-        self.upgrade_battery = upgrade_battery
+
 
     def describe_battery(self):
         print(f"This car has a {self.battery_size}-kWh battery.")
@@ -38,11 +38,14 @@ class Battery():
         """Выводит запас хода для АКБ"""
         if self.battery_size == 75:
             range = 260
-        elif self.upgrade_battery == 100:
-            range = 315
 
         print(f"This car can go about {range} miles on a full charge.")
 
+    def upgrade_battery(self, battery_size):
+        self.battery_size = battery_size
+        if self.battery_size ==100:
+            range = 315
+        print(f"This car can go about {range} miles on a full charge.")
     
 class ElectricCar(Car):
     """Аспекты машины, специфические для электромобилей"""
@@ -56,5 +59,6 @@ my_tesla = ElectricCar('tesla', 'model s', 2020)
 print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery()
 my_tesla.battery.get_range()
+my_tesla.battery.upgrade_battery(100)
 
 
