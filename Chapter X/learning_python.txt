@@ -1,0 +1,3 @@
+In Python you can develop web-applets.
+In Python you can develop games.
+In python you can develop and improve your applets.
